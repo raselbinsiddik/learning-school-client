@@ -1,15 +1,29 @@
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Login = () => {
-    const { register, handleSubmit} = useForm();
+    const { register, handleSubmit } = useForm();
+    const { signIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
-        
-        console.log(data);
+        signIn(data.email, data.password)
+            .then(result => {
+                const loginUser = result.user;
+                console.log(loginUser);
+                navigate(from, { replace: true });
+        })
+            .catch(error => {
+            console.log(error);
+        })
     }
     return (
         <div>
@@ -34,7 +48,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" {...register('password', {
+                                <input type="password" {...register('password', {
                                     required: true
                                 })} name="password" placeholder="password" className="input input-bordered" />
                                 <label className="label">
