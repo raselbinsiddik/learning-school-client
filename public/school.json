@@ -3,36 +3,55 @@
         "_id": "123",
         "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN0dWRlbnQlMjBsZWFybmluZyUyMGluJTIwdGhlJTIwJTIwY2xhc3MlMjB0ZWFjaGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
         "language": "English",
-        "numbers": 25
+        "numbers": 25,
+        "instructor":"Rkibul hasan",
+        "available_seats":20,
+        "price":400
     },
     {
         "_id": "456",
         "image": "https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudCUyMGxlYXJuaW5nJTIwaW4lMjB0aGUlMjAlMjBjbGFzcyUyMHRlYWNoZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
         "language": "Arabic",
-        "numbers": 18
+        "numbers": 18,
+        "instructor": "Atikul islam",
+        "available_seats": 25,
+        "price": 400
+        
     },
     {
         "_id": "789",
         "image": "https://media.istockphoto.com/id/1430624547/photo/middle-school-teacher-and-students-at-desk-in-classroom.webp?b=1&s=170667a&w=0&k=20&c=hSIDzk0EnIsB-plmoCDcWagupd67QwP8cMWH5jbc46I=",
         "language": "Chainise",
-        "numbers": 10
+        "numbers": 10,
+        "instructor": "Gius Uddin",
+        "available_seats": 20,
+        "price": 400
     },
     {
         "_id": "234",
         "image": "https://media.istockphoto.com/id/1399040809/photo/elementary-students-using-technology-at-school.webp?b=1&s=170667a&w=0&k=20&c=bSEl3wuuSvVSAZhVk5IM9EoF76Xi5qJwuvKUZZ0xonc=",
         "language": "Japanise",
-        "numbers": 32
+        "numbers": 32,
+        "instructor": "Habibullah Khan",
+        "available_seats": 20,
+        "price": 400
     },
     {
         "_id": "567",
         "image": "https://plus.unsplash.com/premium_photo-1664298626749-93845642877e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN0dWRlbnQlMjBsZWFybmluZyUyMGluJTIwdGhlJTIwJTIwY2xhc3MlMjB0ZWFjaGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
         "language": "Korian",
-        "numbers": 15
+        "numbers": 15,
+        "instructor": "Shakil hasan",
+        "available_seats": 20,
+        "price": 400
     },
     {
         "_id": "890",
         "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0dWRlbnQlMjBsZWFybmluZyUyMGluJTIwdGhlJTIwJTIwY2xhc3MlMjB0ZWFjaGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
         "language": "Latins",
-        "numbers": 8
+        "numbers": 8,
+        "instructor": "Imran hasan",
+        "available_seats": 20,
+        "price": 400
     }
 ]

@@ -4,41 +4,59 @@
         "name":"Gius Uddin",
         "title":"English",
         "experience":"6 Years muster in London",
-        "image":"https://img.freepik.com/free-photo/teacher-doing-english-lesson-online-his-students_23-2148963016.jpg?size=626&ext=jpg&ga=GA1.2.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/teacher-doing-english-lesson-online-his-students_23-2148963016.jpg?size=626&ext=jpg&ga=GA1.2.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses":"class 10,11,12",
+        "name_classes":"English first And Grammer",
+        "email":"gias@uddin.com"
     },
     {
         "_id":1,
         "name":"Rokibul hasan",
         "title":"Arabic",
         "experience":"4 Years muster in America",
-        "image":"https://img.freepik.com/free-photo/arabic-businessman-traditional-wear-working-with-laptop-computer-pointing-with-finger-side-looking-confident-sitting-table-office_141793-47650.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/arabic-businessman-traditional-wear-working-with-laptop-computer-pointing-with-finger-side-looking-confident-sitting-table-office_141793-47650.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 5,7,10",
+        "name_classes": "Arabic first And Grammer",
+        "email": "rokibul@hasan.com"
     },
     {
         "_id":1,
         "name":"Atikul islam Atik",
         "title":"Korean",
         "experience":"5 Years muster in Frence",
-        "image":"https://img.freepik.com/free-photo/unpleased-male-teacher-wearing-glasses-points-with-pointer-stick-blackboard-sitting-table-with-school-tools-classroom_141793-114329.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/unpleased-male-teacher-wearing-glasses-points-with-pointer-stick-blackboard-sitting-table-with-school-tools-classroom_141793-114329.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 2, 4, 5",
+        "name_classes": "Korean first And Grammer",
+        "email": "atikul@islam.com"
     },
     {
         "_id":1,
         "name":"Muin Ali",
         "title":"Frence",
         "experience":"6 Years muster",
-        "image":"https://img.freepik.com/free-photo/confident-young-blonde-teacher-wearing-glasses-sitting-desk-with-school-tools-classroom-looking-camera-showing-thumb-up_141793-105196.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/confident-young-blonde-teacher-wearing-glasses-sitting-desk-with-school-tools-classroom-looking-camera-showing-thumb-up_141793-105196.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 10, 11, 12",
+        "name_classes": "Frence first And Grammer",
+        "email": "muhin@ali.com"
     },
     {
         "_id":1,
         "name":"Imran hasan",
         "title":"Latins",
         "experience":"6 Years muster in Korea",
-        "image":"https://img.freepik.com/free-photo/side-view-man-classroom_23-2150312806.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/side-view-man-classroom_23-2150312806.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 6, 7, 8",
+        "name_classes": "latin first And Grammer",
+        "email": "imran@hasan.com"
     },
     {
         "_id":1,
         "name":"Habibullah Khan",
         "title":"Chainis",
         "experience":"3 Years muster in japan",
-        "image":"https://img.freepik.com/free-photo/strict-teacher-looking-camera-classroom_23-2148201056.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1"
+        "image":"https://img.freepik.com/free-photo/strict-teacher-looking-camera-classroom_23-2148201056.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 2,3,4",
+        "name_classes": "Chainis first And Grammer",
+        "email": "habub@khan.com"
     }
 ]

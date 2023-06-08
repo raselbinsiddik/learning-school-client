@@ -8,7 +8,7 @@ import ExtraSection from "../ExtraSection";
 const Home = () => {
     return (
         <div>
-            <Helmet><title>Home</title></Helmet>
+            <Helmet><title>Translang | Home</title></Helmet>
             <Banner></Banner>
             <Popular></Popular>
             <Instructor></Instructor>
