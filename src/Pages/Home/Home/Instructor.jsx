@@ -6,16 +6,17 @@ const Instructor = () => {
     const [teachers, setTeachears] = useState([]);
 
     useEffect(() => {
-        fetch('Instructor.json')
+        fetch('http://localhost:5000/instructor')
             .then(res => res.json())
             .then(data => setTeachears(data))
     }, [])
     return (
-        <div>
+        <div className="my-8">
             <SectionTitle subHeading={'instructor'} heading={'Our instructor one of the best teacher'}></SectionTitle>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    teachers.map(teacher => <p key={teacher._id}>
+                    teachers.slice(0, 6).map(teacher => <p key={teacher._id}>
                         <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-4">
                             <figure><img className="h-72" src={teacher.image} alt="Shoes" /></figure>
                             <div className="card-body">

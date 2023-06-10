@@ -1,6 +1,6 @@
 [
     {
-        "_id":1,
+        
         "name":"Gius Uddin",
         "title":"English",
         "experience":"6 Years muster in London",
@@ -10,7 +10,7 @@
         "email":"gias@uddin.com"
     },
     {
-        "_id":1,
+        
         "name":"Rokibul hasan",
         "title":"Arabic",
         "experience":"4 Years muster in America",
@@ -20,7 +20,7 @@
         "email": "rokibul@hasan.com"
     },
     {
-        "_id":1,
+        
         "name":"Atikul islam Atik",
         "title":"Korean",
         "experience":"5 Years muster in Frence",
@@ -30,7 +30,7 @@
         "email": "atikul@islam.com"
     },
     {
-        "_id":1,
+        
         "name":"Muin Ali",
         "title":"Frence",
         "experience":"6 Years muster",
@@ -40,7 +40,7 @@
         "email": "muhin@ali.com"
     },
     {
-        "_id":1,
+        
         "name":"Imran hasan",
         "title":"Latins",
         "experience":"6 Years muster in Korea",
@@ -50,11 +50,41 @@
         "email": "imran@hasan.com"
     },
     {
-        "_id":1,
+        
         "name":"Habibullah Khan",
         "title":"Chainis",
         "experience":"3 Years muster in japan",
         "image":"https://img.freepik.com/free-photo/strict-teacher-looking-camera-classroom_23-2148201056.jpg?size=626&ext=jpg&ga=GA1.1.602249995.1672515158&semt=country_rows_v1",
+        "taken_clsses": "class 2,3,4",
+        "name_classes": "Chainis first And Grammer",
+        "email": "habub@khan.com"
+    },
+    {
+        
+        "name":"Habibullah Khan",
+        "title":"Chainis",
+        "experience":"3 Years muster in japan",
+        "image":"https://img.freepik.com/premium-photo/education-school-learning-teaching-people-concept-group-students-teacher-talking-classroom_380164-145747.jpg?size=626&ext=jpg&ga=GA1.2.602249995.1672515158&semt=ais",
+        "taken_clsses": "class 2,3,4",
+        "name_classes": "Chainis first And Grammer",
+        "email": "habub@khan.com"
+    },
+    {
+        
+        "name":"Habibullah Khan",
+        "title":"Chainis",
+        "experience":"3 Years muster in japan",
+        "image":"https://img.freepik.com/free-photo/man-teacher-wearing-glasses-sitting-school-desk-front-blackboard-classroom-showing-chalkboard-explaining-lesson-showing-thumb-up-smiling_141793-132976.jpg?size=626&ext=jpg&ga=GA1.2.602249995.1672515158&semt=ais",
+        "taken_clsses": "class 2,3,4",
+        "name_classes": "Chainis first And Grammer",
+        "email": "habub@khan.com"
+    },
+    {
+        
+        "name":"Habibullah Khan",
+        "title":"Chainis",
+        "experience":"3 Years muster in japan",
+        "image":"https://img.freepik.com/free-photo/happy-smiling-young-male-teacher-sitting-school-desk-with-books-notes-holding-pencil-front-blackboard-classroom_141793-98933.jpg?size=626&ext=jpg&ga=GA1.2.602249995.1672515158&semt=ais",
         "taken_clsses": "class 2,3,4",
         "name_classes": "Chainis first And Grammer",
         "email": "habub@khan.com"

@@ -28,7 +28,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                Translang | Login
+                <title>Translang | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">

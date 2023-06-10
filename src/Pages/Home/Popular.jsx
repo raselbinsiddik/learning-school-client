@@ -6,16 +6,16 @@ const Popular = () => {
     const [populars, setPopulars] = useState([]);
 
     useEffect(() => {
-        fetch('school.json')
+        fetch('http://localhost:5000/studentClass')
             .then(res => res.json())
             .then(data => setPopulars(data))
     },[])
     return (
-        <div>
+        <div className="my-8">
             <SectionTitle subHeading={'our class'}heading={'we are popular for our class'}></SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    populars.map(popular => <p key={popular._id}>
+                    populars.slice(0, 6).map(popular => <p key={popular._id}>
                         <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-4">
                             <figure><img className="h-72" src={popular.image} alt="Shoes" /></figure>
                             <div className="card-body">

@@ -2,27 +2,53 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { createUser } = useContext(AuthContext);
     const password = React.useRef({});
     password.current = watch('password', '');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-            })
-            .catch(error => console.log(error));
+                const saveUser = { name: data.name, email: data.email }
+                
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'your Register successfull',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                            
+                        }
+                        navigate(from, { replace: true });
+                    });
+                })    
     }
 
     return (
         <div>
-            <Helmet>Translang | Sign up</Helmet>
+            <Helmet><title>Translang | Sign up</title></Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">

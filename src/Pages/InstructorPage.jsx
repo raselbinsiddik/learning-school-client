@@ -8,15 +8,15 @@ const InstructorPage = () => {
     const [teachers, setTeachears] = useState([]);
 
     useEffect(() => {
-        fetch('Instructor.json')
+        fetch('http://localhost:5000/instructor')
             .then(res => res.json())
             .then(data => setTeachears(data))
     }, [])
         
 
     return (
-        <div>
-            <Helmet>Translang | Instructor</Helmet>
+        <div className="my-8">
+            <Helmet><title>Translang | Instructor</title></Helmet>
             <SectionTitle subHeading={'instructor'} heading={'Our instructor one of the best teacher'}></SectionTitle>
             <div>
                 {

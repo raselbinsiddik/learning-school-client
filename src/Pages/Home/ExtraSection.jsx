@@ -8,7 +8,7 @@ import class6 from '../../assets/learn4.jpg'
 
 const ExtraSection = () => {
     return (
-        <div>
+        <div className="my-8">
             <SectionTitle subHeading={'course'} heading={'Our course start in this ruls'}></SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div className="card w-96 bg-base-100 shadow-xl mx-auto">

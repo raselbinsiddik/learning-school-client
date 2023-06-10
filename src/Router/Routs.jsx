@@ -5,7 +5,11 @@ import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import InstructorPage from "../Pages/InstructorPage";
 import ClassesPage from "../Pages/Home/ClassesPage";
-import DashBoard from "../Pages/DashBoard/DashBoard"
+import DashBoard from "../layout/DashBoard";
+import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
+import MyEnrollClass from "../Pages/DashBoard/MyEnrollClass";
+import AllUsers from "../Pages/DashBoard/AllUsers";
+// import DashBoard from "../Pages/DashBoard/DashBoard"
 
 export const router = createBrowserRouter([
     {
@@ -39,7 +43,16 @@ export const router = createBrowserRouter([
         element: <DashBoard></DashBoard>,
         children: [
             {
-                
+                path: 'myselectedclass',
+                element:<MySelectedClass></MySelectedClass>
+            },
+            {
+                path: 'myenrollclass',
+                element:<MyEnrollClass></MyEnrollClass>
+            },
+            {
+                path: 'allusers',
+                element:<AllUsers></AllUsers>
             }
         ]
     }
