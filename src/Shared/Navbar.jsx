@@ -24,8 +24,8 @@ const Navbar = () => {
             {
                 user ? <>
                     <li><button onClick={handleLogout} className="btn btn-ghost">Logout</button></li>
-                    {/* <li><a>{user.photoURL}</a></li> */}
-                    <li><a>{user.displayName}</a></li>
+                    <img className='w-10 rounded-full' src={user.photoURL} alt="" />
+                    <Link><li><a>{user?.displayName}</a></li></Link>
                 </>
                   : <Link to="/login"><li><a>Login</a></li></Link>
             }

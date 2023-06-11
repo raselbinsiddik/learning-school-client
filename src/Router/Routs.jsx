@@ -9,6 +9,9 @@ import DashBoard from "../layout/DashBoard";
 import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
 import MyEnrollClass from "../Pages/DashBoard/MyEnrollClass";
 import AllUsers from "../Pages/DashBoard/AllUsers";
+import AddAClass from "../Pages/DashBoard/AddAClass";
+import AddAClassInfo from "../Pages/DashBoard/AddAClassInfo";
+import ManageClasses from "../Pages/DashBoard/ManageClasses";
 // import DashBoard from "../Pages/DashBoard/DashBoard"
 
 export const router = createBrowserRouter([
@@ -53,6 +56,18 @@ export const router = createBrowserRouter([
             {
                 path: 'allusers',
                 element:<AllUsers></AllUsers>
+            },
+            {
+                path: 'addaclass',
+                element:<AddAClass></AddAClass>
+            },
+            {
+                path: 'addclassinfo',
+                element:<AddAClassInfo></AddAClassInfo>
+            },
+            {
+                path: 'manageclass',
+                element:<ManageClasses></ManageClasses>
             }
         ]
     }

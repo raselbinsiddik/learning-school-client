@@ -1,51 +1,154 @@
+
 // import { NavLink, Outlet } from "react-router-dom";
-// import {  Zoom } from "react-awesome-reveal";
+// import { Zoom } from "react-awesome-reveal";
 // import { FaAddressBook, FaHome, FaSellcast } from "react-icons/fa";
 // import { Helmet } from "react-helmet";
+// import UseAllUsers from "../hooks/UseAllUsers";
+// import useInstructor from "../hooks/useInstructor";
+
 
 // const DashBoard = () => {
+//     // const role = "instructor"; // Replace instructor with the actual role value based on user login
 
-//     const isAdmin = true;
+//     const [isAdmin] = UseAllUsers();
+//     const [isInstructor] = useInstructor();
+
+//     const renderAdminSidebar = () => (
+//         <>
+//             <li>
+//                 <NavLink to="/dashboard/home">
+//                     <Zoom duration={1000} count={2}>
+//                         <FaSellcast />
+//                     </Zoom>
+//                     Admin Home
+//                 </NavLink>
+//             </li>
+//             <li>
+//                 <NavLink to="/dashboard/myenrollclass">
+//                     <Zoom>
+//                         <FaAddressBook />
+//                     </Zoom>
+//                     Manage users
+//                 </NavLink>
+//             </li>
+//             <li>
+//                 <NavLink to="/dashboard/allusers">
+//                     <Zoom>
+//                         <FaAddressBook />
+//                     </Zoom>
+//                     All users
+//                 </NavLink>
+//             </li>
+//             <div className="divider"></div>
+//             <li>
+//                 <NavLink to="/">
+//                     <Zoom>
+//                         <FaAddressBook />
+//                     </Zoom>
+//                     Home
+//                 </NavLink>
+//             </li>
+            
+//         </>
+//     );
+
+//     const renderInstructorSidebar = () => (
+//         <>
+//             <li>
+//                 <NavLink to="/dashboard/addaclass">
+//                     <Zoom duration={1000} count={2}>
+//                         <FaSellcast />
+//                     </Zoom>
+//                     Add a class
+//                 </NavLink>
+//             </li>
+//             <li>
+//                 <NavLink to="/dashboard/addclassinfo">
+//                     <Zoom duration={1000} count={2}>
+//                         <FaSellcast />
+//                     </Zoom>
+//                     My Classes
+//                 </NavLink>
+//             </li>
+//             <div className="divider"></div>
+//             <li>
+//                 <NavLink to="/">
+//                     <Zoom duration={1000} count={2}>
+//                         <FaSellcast />
+//                     </Zoom>
+//                     Home
+//                 </NavLink>
+//             </li>
+//         </>
+//     );
+
+//     const renderUserSidebar = () => (
+//         <>
+//             <li>
+//                 <NavLink to="/dashboard/myselectedclass">
+//                     <Zoom duration={1000} count={2}>
+//                         <FaSellcast />
+//                     </Zoom>
+//                     My Selected Class
+//                 </NavLink>
+//             </li>
+//             <li>
+//                 <NavLink to="/dashboard/myenrollclass">
+//                     <Zoom>
+//                         <FaAddressBook />
+//                     </Zoom>
+//                     My Enrolled Classes
+//                 </NavLink>
+//             </li>
+//             <div className="divider"></div>
+//             <li>
+//                 <NavLink to="/dashboard/pay">Payment</NavLink>
+//             </li>
+//             <li>
+//                 <NavLink to="/">
+//                     <Zoom>
+//                         <FaHome />
+//                     </Zoom>
+//                     Home
+//                 </NavLink>
+//             </li>
+//         </>
+//     );
+
 //     return (
+        
 //         <div className="drawer lg:drawer-open">
+            
+            
+            
 //             <Helmet>
 //                 <title>Translang | Dashboard</title>
 //             </Helmet>
 //             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 //             <div className="drawer-content flex flex-col items-center justify-center">
 //                 {/* Page content here */}
-//                 <Outlet></Outlet>
-//                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
+//                 <Outlet />
+                
+                
+//                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+//                     Open drawer
+//                 </label>
 //             </div>
 //             <div className="drawer-side ">
 //                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 //                 <ul className="menu p-4 w-80 h-full bg-[#d1a054] text-xl font-bold">
 //                     {/* Sidebar content here */}
-//                     <h1 className="font-bold text-3xl mb-5">Dash Board</h1>
+//                     <h1 className="font-bold text-3xl mb-5">Dashboard</h1>
 
-//                     {
-//                         isAdmin ?
-//                             <>
-//                             <li><NavLink to="/dashboard/home"><Zoom duration={1000} count={2}><FaSellcast></FaSellcast></Zoom>Admin Home</NavLink></li>
-//                             <li><NavLink to="/dashboard/myenrollclass"><Zoom><FaAddressBook></FaAddressBook></Zoom>Manage users</NavLink></li>
-//                             <li><NavLink to="/dashboard/allusers"><Zoom><FaAddressBook></FaAddressBook></Zoom>All users</NavLink></li>
-//                             <div className="divider"></div>
-                           
-//                         </> :
-//                             <>
-//                                 <li><NavLink to="/dashboard/myselectedclass"><Zoom duration={1000} count={2}><FaSellcast></FaSellcast></Zoom>My selected class</NavLink></li>
-//                                 <li><NavLink to="/dashboard/myenrollclass"><Zoom><FaAddressBook></FaAddressBook></Zoom>My Enrolled classes</NavLink></li>
-//                                 <div className="divider"></div>
-//                                 <li><NavLink to="/dashboard/pay">Payment</NavLink></li>
-//                                 <li><NavLink to="/"><Zoom><FaHome></FaHome></Zoom> Home</NavLink></li>
-
-//                             </>
-//                     }
+//                     {isAdmin && renderAdminSidebar()}
+//                     {isInstructor && renderInstructorSidebar()}
+//                     {!isAdmin && !isInstructor && renderUserSidebar()}
 //                 </ul>
-
+                
 //             </div>
+           
 //         </div>
+       
 //     );
 // };
 
@@ -57,26 +160,31 @@ import { NavLink, Outlet } from "react-router-dom";
 import { Zoom } from "react-awesome-reveal";
 import { FaAddressBook, FaHome, FaSellcast } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import UseAllUsers from "../hooks/UseAllUsers";
+import useInstructor from "../hooks/useInstructor";
 
 const DashBoard = () => {
-    const role = "instructor"; // Replace with the actual role value based on user login
+    const [isAdmin] = UseAllUsers();
+    const [isInstructor] = useInstructor();
+    console.log(isAdmin);
+    console.log(isInstructor);
 
     const renderAdminSidebar = () => (
         <>
-            <li>
+            {/* <li>
                 <NavLink to="/dashboard/home">
                     <Zoom duration={1000} count={2}>
                         <FaSellcast />
                     </Zoom>
                     Admin Home
                 </NavLink>
-            </li>
+            </li> */}
             <li>
-                <NavLink to="/dashboard/myenrollclass">
+                <NavLink to="/dashboard/manageclass">
                     <Zoom>
                         <FaAddressBook />
                     </Zoom>
-                    Manage users
+                    Manage Classes
                 </NavLink>
             </li>
             <li>
@@ -84,24 +192,48 @@ const DashBoard = () => {
                     <Zoom>
                         <FaAddressBook />
                     </Zoom>
-                    All users
+                    Manage users
                 </NavLink>
             </li>
             <div className="divider"></div>
+            <li>
+                <NavLink to="/">
+                    <Zoom>
+                        <FaAddressBook />
+                    </Zoom>
+                    Home
+                </NavLink>
+            </li>
         </>
     );
 
     const renderInstructorSidebar = () => (
         <>
             <li>
-                <NavLink to="/dashboard/instructor-info">
+                <NavLink to="/dashboard/addaclass">
                     <Zoom duration={1000} count={2}>
                         <FaSellcast />
                     </Zoom>
-                    Instructor Information
+                    Add a class
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/dashboard/addclassinfo">
+                    <Zoom duration={1000} count={2}>
+                        <FaSellcast />
+                    </Zoom>
+                    My Classes
                 </NavLink>
             </li>
             <div className="divider"></div>
+            <li>
+                <NavLink to="/">
+                    <Zoom duration={1000} count={2}>
+                        <FaSellcast />
+                    </Zoom>
+                    Home
+                </NavLink>
+            </li>
         </>
     );
 
@@ -124,9 +256,6 @@ const DashBoard = () => {
                 </NavLink>
             </li>
             <div className="divider"></div>
-            <li>
-                <NavLink to="/dashboard/pay">Payment</NavLink>
-            </li>
             <li>
                 <NavLink to="/">
                     <Zoom>
@@ -151,15 +280,16 @@ const DashBoard = () => {
                     Open drawer
                 </label>
             </div>
-            <div className="drawer-side ">
+            <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full bg-[#d1a054] text-xl font-bold">
                     {/* Sidebar content here */}
                     <h1 className="font-bold text-3xl mb-5">Dashboard</h1>
 
-                    {role === "admin" && renderAdminSidebar()}
-                    {role === "instructor" && renderInstructorSidebar()}
-                    {role !== "admin" && role !== "instructor" && renderUserSidebar()}
+                    {isAdmin && renderAdminSidebar()}
+                    {isInstructor && renderInstructorSidebar()}
+                    {/* {!isAdmin && !isInstructor &&  renderUserSidebar()} */}
+                    {!isAdmin && !isInstructor &&  renderUserSidebar()}
                 </ul>
             </div>
         </div>
@@ -167,3 +297,4 @@ const DashBoard = () => {
 };
 
 export default DashBoard;
+

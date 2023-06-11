@@ -15,7 +15,7 @@ const InstructorPage = () => {
         
 
     return (
-        <div className="my-8">
+        <div>
             <Helmet><title>Translang | Instructor</title></Helmet>
             <SectionTitle subHeading={'instructor'} heading={'Our instructor one of the best teacher'}></SectionTitle>
             <div>
