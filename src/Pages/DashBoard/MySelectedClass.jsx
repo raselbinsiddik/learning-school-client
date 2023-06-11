@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const MySelectedClass = () => {
     const [book, refetch] = useBooked();
 
-    const total = book.reduce((sum, item) =>item.price + sum, 0)
+    const total = book?.reduce((sum, item) =>item.price + sum, 0)
     console.log(book);
 
     const handleDelete = _id => {

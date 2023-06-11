@@ -4,13 +4,18 @@ import { useQuery } from "@tanstack/react-query";
 
 
 const useBooked = () => {
-    const { user } = useContext(AuthContext);
+    const { user, loaiding } = useContext(AuthContext);
+    // const token = localStorage.getItem('access-token')
 
     const { refetch, data:book=[] } = useQuery({
         queryKey: ['booked', user?.email],
+        enabled:!loaiding,
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/booked?email=${user?.email}`)
+        
             return res.json();
+            
+           
         }
     })
     return [book, refetch]
