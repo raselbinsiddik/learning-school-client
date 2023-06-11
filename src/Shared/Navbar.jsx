@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import UseAllUsers from "../hooks/UseAllUsers";
+import useInstructor from '../hooks/useInstructor'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = UseAllUsers();
+    const [isInstructor] = useInstructor();
 
     const handleLogout = () => {
         logOut()
@@ -15,10 +18,23 @@ const Navbar = () => {
     const navPage =
         <>
             <Link to="/"><li><a>Home</a></li></Link>
-           <Link to="/classpage"> <li><a>Classes</a></li></Link>
-            {
-                user ? <Link to="/dashBoard"><li><a>Dash Board</a></li></Link>:''
-            }
+            <Link to="/classpage"> <li><a>Classes</a></li></Link>
+            {isAdmin ? (
+                <li>
+                    <Link to="/dashboard/manageclass">Dashboard</Link>
+                </li>
+            ) : isInstructor ? (
+                <li>
+                        <Link to="/dashboard/addaclass">Dashboard</Link>
+                </li>
+            ) : user ? (
+                <li>
+                            <Link to="/dashboard/myselectedclass">Dashboard</Link>
+                </li>
+            ) : ''}
+        
+            
+            
             <Link to="/instructorpage"><li><a>Instructor</a></li></Link>
             
             {

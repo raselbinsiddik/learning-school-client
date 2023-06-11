@@ -3,6 +3,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
 import SectionTitle from "../../SectionTitle/SectionTitle";
+import { FaFedex, FaUserAstronaut } from "react-icons/fa";
+import { Zoom } from "react-awesome-reveal";
 
 
 const AddAClassInfo = () => {
@@ -31,8 +33,8 @@ const AddAClassInfo = () => {
                                 <p className="card-title">Available Seats: {a.availableSeats}</p>
                                 <p className="card-title">Total Enrolled Students: {a.availableSeats}</p>
                                 <div className="card-actions justify-end">
-                                    <button className="badge badge-outline">Status</button>
-                                    <button className="badge badge-outline">Feedbak</button>
+                                    <button className="badge badge-outline"><Zoom><FaUserAstronaut /></Zoom> Status</button>
+                                    <button className="badge badge-outline"><Zoom><FaFedex /></Zoom> Feedbak</button>
                                 </div>
                             </div>
                         </div>

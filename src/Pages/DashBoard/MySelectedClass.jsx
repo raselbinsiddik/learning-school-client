@@ -1,13 +1,12 @@
 import { FaDollarSign, FaRegTrashAlt } from "react-icons/fa";
 import useBooked from "../../hooks/useBooked";
 import Swal from "sweetalert2";
+import { Zoom } from "react-awesome-reveal";
 
 
 const MySelectedClass = () => {
     const [book, refetch] = useBooked();
 
-    const total = book?.reduce((sum, item) =>item.price + sum, 0)
-    console.log(book);
 
     const handleDelete = _id => {
         Swal.fire({
@@ -47,7 +46,6 @@ const MySelectedClass = () => {
          
         <div className="overflow-x-auto  w-full">
             <div className="flex justify-around"><span className="text-3xl font-semibold">My Selected classes: {book.length}</span>
-                <span className="text-3xl font-semibold">Total price: ${total}</span>
             </div>
             
             <table className="table font-bold">
@@ -85,10 +83,10 @@ const MySelectedClass = () => {
                                 <td>{b.instructor}</td>
                                 <td>${b.price}</td>
                                 <th>
-                                    <button className="btn btn-success"><FaDollarSign></FaDollarSign> Pay</button>
+                                    <button className="btn btn-success"><Zoom><FaDollarSign /></Zoom> Pay</button>
                                 </th>
                                 <th>
-                                    <button onClick={() => handleDelete(b._id)} className="btn btn-outline"><FaRegTrashAlt></FaRegTrashAlt> Delete</button>
+                                    <button onClick={() => handleDelete(b._id)} className="btn btn-outline"><Zoom><FaRegTrashAlt /></Zoom> Delete</button>
                                 </th>
                             </tr>
                         )

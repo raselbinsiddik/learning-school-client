@@ -6,8 +6,16 @@ import "./AllUsers.css";
 
 
 const AllUsers = () => {
+    
+    const token = localStorage.getItem('access-token');
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('http://localhost:5000/users',
+            {
+                headers: {
+                    authorization: `bearer ${token}`
+                }
+
+            })
         return res.json();
     });
 
