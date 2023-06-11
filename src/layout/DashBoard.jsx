@@ -118,13 +118,12 @@ const DashBoard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 h-full bg-[#d1a054] text-xl font-bold">
+                <ul className="menu p-4 w-80 h-full bg-[#d16051] text-xl font-bold">
                     {/* Sidebar content here */}
                     <h1 className="font-bold text-3xl mb-5">Dashboard</h1>
 
                     {isAdmin && renderAdminSidebar()}
                     {isInstructor && renderInstructorSidebar()}
-                    {/* {!isAdmin && !isInstructor &&  renderUserSidebar()} */}
                     {!isAdmin && !isInstructor &&  renderUserSidebar()}
                 </ul>
             </div>

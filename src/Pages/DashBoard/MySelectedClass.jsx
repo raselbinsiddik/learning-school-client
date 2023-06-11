@@ -2,6 +2,7 @@ import { FaDollarSign, FaRegTrashAlt } from "react-icons/fa";
 import useBooked from "../../hooks/useBooked";
 import Swal from "sweetalert2";
 import { Zoom } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 
 const MySelectedClass = () => {
@@ -58,6 +59,8 @@ const MySelectedClass = () => {
                         <th>Class Name</th>
                         <th>Instructor</th>
                         <th>Price</th>
+                        <th>Fee</th>
+                        <th>Action</th>
                         
                     </tr>
                 </thead>
@@ -83,7 +86,7 @@ const MySelectedClass = () => {
                                 <td>{b.instructor}</td>
                                 <td>${b.price}</td>
                                 <th>
-                                    <button className="btn btn-success"><Zoom><FaDollarSign /></Zoom> Pay</button>
+                                    <Link to="/dashboard/payment"><button className="btn btn-success"><Zoom><FaDollarSign /></Zoom> Pay</button></Link>
                                 </th>
                                 <th>
                                     <button onClick={() => handleDelete(b._id)} className="btn btn-outline"><Zoom><FaRegTrashAlt /></Zoom> Delete</button>

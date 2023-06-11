@@ -13,6 +13,7 @@ import AddAClass from "../Pages/DashBoard/AddAClass";
 import AddAClassInfo from "../Pages/DashBoard/AddAClassInfo";
 import ManageClasses from "../Pages/DashBoard/ManageClasses";
 import AdminRoute from "./AdminRoute";
+import Payment from "../Pages/DashBoard/Payment";
 // import DashBoard from "../Pages/DashBoard/DashBoard"
 
 export const router = createBrowserRouter([
@@ -64,11 +65,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'addclassinfo',
-                element:<AddAClassInfo></AddAClassInfo>
+                element: <AdminRoute><AddAClassInfo></AddAClassInfo></AdminRoute>
             },
             {
                 path: 'manageclass',
                 element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+            },
+            {
+                path: 'payment',
+                element:<Payment></Payment>
             }
         ]
     }

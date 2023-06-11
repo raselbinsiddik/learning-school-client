@@ -13,6 +13,7 @@ const AddAClassInfo = () => {
         const res = await fetch(`http://localhost:5000/addClass?email=${user?.email}`)
         return res.json();
     });
+    console.log(addClass);
     return (
         <div>
             <SectionTitle subHeading={'classes'} heading={'my added classes'}></SectionTitle>

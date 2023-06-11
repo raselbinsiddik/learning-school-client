@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import UseAllUsers from "../hooks/UseAllUsers";
-import useInstructor from '../hooks/useInstructor'
+import useInstructor from "../hooks/useInstructor";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
