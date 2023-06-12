@@ -12,6 +12,7 @@ const DashBoard = () => {
     const [isInstructor] = useInstructor();
     console.log(isAdmin);
     console.log(isInstructor);
+   
 
     const renderAdminSidebar = () => (
         <>
@@ -89,6 +90,14 @@ const DashBoard = () => {
                         <FaAddressBook />
                     </Zoom>
                     My Enrolled Classes
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/dashboard/paymentistory">
+                    <Zoom>
+                        <FaAddressBook />
+                    </Zoom>
+                    Payment History
                 </NavLink>
             </li>
             <div className="divider"></div>

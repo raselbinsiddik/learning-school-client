@@ -36,6 +36,7 @@ const AddAClassInfo = () => {
                                 <div className="card-actions justify-end">
                                     <button className="badge badge-outline"><Zoom><FaUserAstronaut /></Zoom> Status</button>
                                     <button className="badge badge-outline"><Zoom><FaFedex /></Zoom> Feedbak</button>
+                                    <button className="badge badge-outline"><Zoom><FaFedex /></Zoom>update</button>
                                 </div>
                             </div>
                         </div>

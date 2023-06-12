@@ -15,6 +15,7 @@ import ManageClasses from "../Pages/DashBoard/ManageClasses";
 import AdminRoute from "./AdminRoute";
 import Payment from "../Pages/DashBoard/Payment";
 import NotPound from "../NotPound";
+import PaymentHistory from "../Pages/DashBoard/PaymentHistory";
 // import DashBoard from "../Pages/DashBoard/DashBoard"
 
 export const router = createBrowserRouter([
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
             {
                 path: 'payment/:id',
                 element:<Payment></Payment>
+            },
+            {
+                path: 'paymentistory',
+                element:<PaymentHistory></PaymentHistory>
             }
         ]
     },

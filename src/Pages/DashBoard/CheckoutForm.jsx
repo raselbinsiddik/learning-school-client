@@ -85,6 +85,7 @@ const CheckoutForm = ({book, price}) => {
                 date: new Date(),
                 bookItems: book.itemId,
                 ItemsId: book._id,
+                fee:book.price,
                 status: 'service pending',
                 className: book.language
 
@@ -92,7 +93,7 @@ const CheckoutForm = ({book, price}) => {
             axiosSecure.post('/payment', payment)
                 .then(res => {
                     console.log(res.data);
-                    if (res.result.data.insertedId) {
+                    if (res.data.insertedId) {
                             Swal.fire({
                                 position: 'top-end',
                                 icon: 'success',
