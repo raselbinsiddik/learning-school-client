@@ -86,7 +86,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" {...register('password', {
+                                <input type="password" {...register('password', {
                                     required: true,
                                     minLength: 6,
                                     pattern: /^(?=.*[a-z])^/
@@ -98,7 +98,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Confirm Password</span>
                                 </label>
-                                <input type="text" name="passwordConfirm" {...register('passwordConfirm', {
+                                <input type="password" name="passwordConfirm" {...register('passwordConfirm', {
                                     required: true,
                                     validate: value => value === password.current || 'The passwords do not match.'
                                 })} placeholder="confirm password" className="input input-bordered" />
