@@ -14,6 +14,7 @@ import AddAClassInfo from "../Pages/DashBoard/AddAClassInfo";
 import ManageClasses from "../Pages/DashBoard/ManageClasses";
 import AdminRoute from "./AdminRoute";
 import Payment from "../Pages/DashBoard/Payment";
+import NotPound from "../NotPound";
 // import DashBoard from "../Pages/DashBoard/DashBoard"
 
 export const router = createBrowserRouter([
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
                 element:<Payment></Payment>
             }
         ]
+    },
+    {
+        path: '*',
+        element:<NotPound></NotPound>
     }
 ]);
 

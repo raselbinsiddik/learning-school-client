@@ -7,6 +7,7 @@ const stripPromise = loadStripe(import.meta.env.VITE_Payment);
 
 const Payment = () => {
     const [book] = useBooked();
+
     const firstBookedItem = book.length > 0 ? book[0] : null;
     const price = firstBookedItem ? firstBookedItem.price : null;
     return (
