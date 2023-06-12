@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
-import { FaRegTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import "./AllUsers.css";
 
@@ -59,24 +58,7 @@ const AllUsers = () => {
             });
     };
 
-    const handleDelete = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    refetch();
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Admin delete successful',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                }
-            });
-    };
+    
     return (
         <div className="overflow-x-auto w-full">
             <Helmet>
@@ -95,7 +77,6 @@ const AllUsers = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -122,14 +103,6 @@ const AllUsers = () => {
                                             </button>
                                         </div>)
                                 }
-                            </td>
-                            <td>
-                                <button
-                                    onClick={() => handleDelete(user)}
-                                    className="btn btn-outline"
-                                >
-                                    <FaRegTrashAlt /> Delete
-                                </button>
                             </td>
                         </tr>
                     ))}

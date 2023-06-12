@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const MySelectedClass = () => {
     const [book, refetch] = useBooked();
-
+console.log(book);
 
     const handleDelete = _id => {
         Swal.fire({
@@ -66,7 +66,7 @@ const MySelectedClass = () => {
                 </thead>
                 <tbody>
                     {
-                        book.map((b,index) =>
+                        book?.map((b,index) =>
                             <tr key={b._id}>
                                 <th>
                                     {index + 1}
@@ -86,7 +86,7 @@ const MySelectedClass = () => {
                                 <td>{b.instructor}</td>
                                 <td>${b.price}</td>
                                 <th>
-                                    <Link to="/dashboard/payment"><button className="btn btn-success"><Zoom><FaDollarSign /></Zoom> Pay</button></Link>
+                                    <Link to={`/dashboard/payment/${b._id}`}><button className="btn btn-success"><Zoom><FaDollarSign /></Zoom> Pay</button></Link>
                                 </th>
                                 <th>
                                     <button onClick={() => handleDelete(b._id)} className="btn btn-outline"><Zoom><FaRegTrashAlt /></Zoom> Delete</button>

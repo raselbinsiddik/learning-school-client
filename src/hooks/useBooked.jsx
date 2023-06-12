@@ -9,7 +9,7 @@ const useBooked = () => {
 
     const { refetch, data:book=[] } = useQuery({
         queryKey: ['booked', user?.email],
-        enabled: !loaiding,
+        enabled: !loaiding && !!user?.email,
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/booked?email=${user?.email}`, {
                 headers: {

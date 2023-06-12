@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import UseAxiosSecure from "../../hooks/UseAxiouseScure";
+import Swal from "sweetalert2";
 
 
 
@@ -81,20 +82,28 @@ const CheckoutForm = ({book, price}) => {
             const payment = {
                 email: user?.email,
                 transactionId: paymentIntent.id,
-                price,
                 date: new Date(),
-                bookItems: book.map(item => item.itemId),
-                ItemsId: book.map(item => item._id),
+                bookItems: book.itemId,
+                ItemsId: book._id,
                 status: 'service pending',
-                className: book.map(item => item.language)
+                className: book.language
+
             }
             axiosSecure.post('/payment', payment)
                 .then(res => {
                     console.log(res.data);
                     if (res.data.result.insertedId) {
-                        // fs
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'your Register successfull',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+
+                        }
                     }
-                })
+                )
         }
 
     }
