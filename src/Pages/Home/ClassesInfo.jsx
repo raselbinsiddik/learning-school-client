@@ -3,6 +3,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useBooked from "../../hooks/useBooked";
+import UseAllUsers from "../../hooks/UseAllUsers";
+import useInstructor from "../../hooks/useInstructor";
 
 const ClassesInfo = ({ popular }) => {
     const { image, language, available_seats, instructor, price, _id } = popular;
@@ -10,6 +12,8 @@ const ClassesInfo = ({ popular }) => {
     const [, refetch] = useBooked();
     const navigate = useNavigate();
     const location = useLocation();
+    const [isAdmin] = UseAllUsers();
+    const [isInstructor] = useInstructor();
 
     const handleBooked = popular => {
         console.log(popular);
@@ -65,7 +69,7 @@ const ClassesInfo = ({ popular }) => {
                         <p className="card-title">Price: ${price}</p>
                     </div>
                     <div className="card-actions justify-end">
-                        <button onClick={()=>handleBooked(popular)} className="btn btn-primary">start Now</button>
+                        <button disabled={isAdmin || isInstructor} onClick={() => handleBooked(popular)} className={`btn btn-primary ${isAdmin || isInstructor ? 'bg-red-400':''}`}>start Now</button>
                     </div>
                 </div>
             </div>
