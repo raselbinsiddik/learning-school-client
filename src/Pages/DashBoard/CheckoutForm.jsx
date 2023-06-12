@@ -83,7 +83,8 @@ const CheckoutForm = ({book, price}) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
-                bookItems: book.map(item => item._id),
+                bookItems: book.map(item => item.itemId),
+                ItemsId: book.map(item => item._id),
                 status: 'service pending',
                 className: book.map(item => item.language)
             }
