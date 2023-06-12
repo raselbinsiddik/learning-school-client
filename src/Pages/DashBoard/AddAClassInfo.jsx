@@ -1,16 +1,16 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
-import { Helmet } from "react-helmet";
-import SectionTitle from "../../SectionTitle/SectionTitle";
-import { FaFedex, FaUserAstronaut } from "react-icons/fa";
+import { useContext } from "react";
 import { Zoom } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
+import { FaFedex, FaUserAstronaut } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 
 const AddAClassInfo = () => {
     const { user } = useContext(AuthContext);
     const { data: addClass = []} = useQuery(['addClass'], async () => {
-        const res = await fetch(`http://localhost:5000/addClass?email=${user?.email}`)
+        const res = await fetch(`https://learning-school-server.vercel.app/addClass?email=${user?.email}`)
         return res.json();
     });
     console.log(addClass);

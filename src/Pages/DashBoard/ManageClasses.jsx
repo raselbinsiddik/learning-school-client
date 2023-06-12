@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 const ManageClasses = () => {
    
     const { data: addClass = [] } = useQuery(['addClass'], async () => {
-        const res = await fetch('http://localhost:5000/addClass')
+        const res = await fetch('https://learning-school-server.vercel.app/addClass')
         return res.json();
     });
 

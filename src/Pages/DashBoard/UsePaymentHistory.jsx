@@ -1,6 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
 
 
 const UsePaymentHistory = () => {
@@ -10,7 +10,7 @@ const UsePaymentHistory = () => {
         queryKey: ['booked', user?.email],
         enabled: !loaiding && !!user?.email,
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/payment')
+            const res = await fetch('https://learning-school-server.vercel.app/payment')
 
             return res.json();
 

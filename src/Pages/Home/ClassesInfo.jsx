@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
-import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
-import useBooked from "../../hooks/useBooked";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 import UseAllUsers from "../../hooks/UseAllUsers";
+import useBooked from "../../hooks/useBooked";
 import useInstructor from "../../hooks/useInstructor";
 
 const ClassesInfo = ({ popular }) => {
@@ -19,7 +19,7 @@ const ClassesInfo = ({ popular }) => {
         console.log(popular);
         if (user) {
             const bookedClass = {itemId: _id, image, language, available_seats, instructor, price, email:user.email }
-            fetch('http://localhost:5000/booked', {
+            fetch('https://learning-school-server.vercel.app/booked', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -1,6 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
 
 
 const useInstructor = () => {
@@ -10,7 +10,7 @@ const useInstructor = () => {
     const { data: isInstructor, isLoading: isInstructorLoading } = useQuery({
         queryKey: ['isInstructor', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users/instructor/${user?.email}`,
+            const res = await fetch(`https://learning-school-server.vercel.app/users/instructor/${user?.email}`,
                 {
                     headers: {
                         authorization: `bearer ${token}`

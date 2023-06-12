@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
 import { FaGoogle } from 'react-icons/fa';
-import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const SocialLogin = () => {
@@ -19,7 +19,7 @@ const SocialLogin = () => {
 
                 const saveUser = { name: googleUser.displayName, email: googleUser.email }
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://learning-school-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -3,10 +3,10 @@ import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import SocialLogin from "../Pages/SocialLogin"
-import login from '../assets/login.jpg'
+import SocialLogin from "../Pages/SocialLogin";
+import { AuthContext } from "../Provider/AuthProvider";
+import login from '../assets/login.jpg';
 
 
 const SignUp = () => {
@@ -25,7 +25,7 @@ const SignUp = () => {
                 console.log(loggedUser);
                 const saveUser = { name: data.name, email: data.email }
                 
-                fetch('http://localhost:5000/users', {
+                fetch('https://learning-school-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

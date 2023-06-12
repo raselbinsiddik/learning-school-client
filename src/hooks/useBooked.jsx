@@ -1,6 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
 
 
 const useBooked = () => {
@@ -11,7 +11,7 @@ const useBooked = () => {
         queryKey: ['booked', user?.email],
         enabled: !loaiding && !!user?.email,
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/booked?email=${user?.email}`, {
+            const res = await fetch(`https://learning-school-server.vercel.app/booked?email=${user?.email}`, {
                 headers: {
                     authorization: `bearer ${token}`
                 }

@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
-import SectionTitle from "../../SectionTitle/SectionTitle";
-import Swal from "sweetalert2";
 import { useContext } from "react";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 
 
 const AddAClass = () => {
@@ -23,7 +23,7 @@ const AddAClass = () => {
         const addClass = { name, price, photo, email, availableSeats, instructorName }
         console.log(addClass);
         
-            fetch('http://localhost:5000/addClass', {
+            fetch('https://learning-school-server.vercel.app/addClass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -1,11 +1,11 @@
-import { useContext, useEffect } from 'react';
 import axios from 'axios';
+import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://learning-school-server.vercel.app',
 });
 
 const UseAxiosSecure = () => {

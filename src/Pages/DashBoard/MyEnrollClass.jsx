@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../Provider/AuthProvider";
 import SectionTitle from "../../SectionTitle/SectionTitle";
 
 
@@ -10,7 +10,7 @@ const MyEnrollClass = () => {
     
     const { user } = useContext(AuthContext);
     const { data: enrolled = [] } = useQuery(['payment'], async () => {
-        const res = await fetch(`http://localhost:5000/payment?email=${user?.email}`)
+        const res = await fetch(`https://learning-school-server.vercel.app/payment?email=${user?.email}`)
         return res.json();
     });
     console.log(enrolled);

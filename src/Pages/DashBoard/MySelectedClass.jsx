@@ -1,8 +1,8 @@
-import { FaDollarSign, FaRegTrashAlt } from "react-icons/fa";
-import useBooked from "../../hooks/useBooked";
-import Swal from "sweetalert2";
 import { Zoom } from "react-awesome-reveal";
+import { FaDollarSign, FaRegTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import useBooked from "../../hooks/useBooked";
 
 
 const MySelectedClass = () => {
@@ -21,7 +21,7 @@ console.log(book);
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/booked/${_id}`, {
+                fetch(`https://learning-school-server.vercel.app/booked/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
