@@ -8,7 +8,7 @@ import UseAxiosSecure from "../../hooks/UseAxiouseScure";
 
 
 
-const CheckoutForm = ({price, cart}) => {
+const CheckoutForm = ({book, price}) => {
     const { user } = useContext(AuthContext);
     const stripe = useStripe();
     const elements = useElements();
@@ -35,11 +35,12 @@ const CheckoutForm = ({price, cart}) => {
             return
         }
         const card = elements.getElement(CardElement);
+        console.log(card);
         if (card === null) {
             return
         }
 
-        const { error } = await stripe.createPaymentMethod({
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card
         })
@@ -50,7 +51,7 @@ const CheckoutForm = ({price, cart}) => {
         }
         else {
             setCardError('');
-            // console.log('payment method', paymentMethod);
+            console.log("aaaa", paymentMethod);
         }
         setProcessing(true);
 
@@ -82,13 +83,11 @@ const CheckoutForm = ({price, cart}) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
-                quantity: cart.length,
-                carItems: cart.map(item => item._id),
-                menuItems: cart.map(item => item.menuItemId),
+                bookItems: book.map(item => item._id),
                 status: 'service pending',
-                itemName: cart.map(item => item.name)
+                className: book.map(item => item.language)
             }
-            axiosSecure.post('/payments', payment)
+            axiosSecure.post('/payment', payment)
                 .then(res => {
                     console.log(res.data);
                     if (res.data.result.insertedId) {
@@ -119,6 +118,7 @@ const CheckoutForm = ({price, cart}) => {
                         },
                     }}
                 />
+                {/*  */}
                 <button className="btn btn-primary btn-sm mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
 
                     Pay

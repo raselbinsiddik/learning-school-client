@@ -62,7 +62,7 @@ const ClassesInfo = ({ popular }) => {
                         <h2 className="card-title">Class Name: {language}</h2>
                         <h2 className="card-title">Instructor Name: {instructor}</h2>
                         <p className="card-title">Available Seats: {available_seats}</p>
-                        <p className="card-title">Price: {price}</p>
+                        <p className="card-title">Price: ${price}</p>
                     </div>
                     <div className="card-actions justify-end">
                         <button onClick={()=>handleBooked(popular)} className="btn btn-primary">start Now</button>
