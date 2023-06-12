@@ -15,4 +15,4 @@ TransLang Projects utilizes the following packages and technologies:
 4.react-query: Asynchronous JavaScript and XML for seamless data retrieval and updates.
 Translation API: Integration with a translation API service for accurate and reliable translations.
 
-live site link:
+live site link:  https://trans-language-client.web.app
